@@ -277,6 +277,11 @@ def obj_nodes(nodes):
         elif max_edges_for_type[firstelement.__class__]==2: # binary tree
             for p in g:
                 s += obj_node(p) # nothing special for now
+        else: #ckx: 用于支持两个以上的指向边
+            for p in g:
+                # print("1-2")
+                s += obj_node(p) # nothing special for now
+
 
     # now dump disconnected nodes
     for p in nodes:
